@@ -43,7 +43,7 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#about">About</a>
         <a href="#pricing">Pricing</a>
-        <a class="btn btn-small" href="#consultation">Book Free Call</a>
+        <a class="btn btn-small" href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book Free Call</a>
       </nav>
     </div>
   </header>
@@ -70,7 +70,7 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-large" href="#consultation">Book Your Free 15-Minute Call <span>→</span></a>
+            <a class="btn btn-large" href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book Your Free 15-Minute Call <span>→</span></a>
             <a class="btn-secondary" href="#how-it-works">See How It Works <span>↓</span></a>
           </div>
 
@@ -133,7 +133,7 @@
           <div class="eyebrow">START WITH THE PROBLEM</div>
           <h2>You know your business. <span>I know technology.</span></h2>
           <p>You don’t have to arrive with a perfect app idea. We can start with what’s frustrating, repetitive, expensive, or taking too much time.</p>
-          <a class="text-link arrow-link" href="#consultation">Let’s find the opportunity →</a>
+          <a class="text-link arrow-link" href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Let’s find the opportunity →</a>
         </div>
         <div class="problem-cards compact-grid">
           <article class="problem-card-large reveal"><span class="number">01</span><div class="problem-icon">◇</div><h3>Build an app or product idea</h3><p>You have something you want to create, but you don’t want to hire a full development team just to test it.</p></article>
@@ -181,7 +181,7 @@
             <h3>Start with a free 15-minute conversation.</h3>
             <p>Tell me what you do, what’s frustrating you, or what you want to create. We’ll quickly see whether there’s a useful place to start.</p>
           </div>
-          <a class="btn btn-large" href="#consultation">Book Your Free Call <span>→</span></a>
+          <a class="btn btn-large" href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book Your Free Call <span>→</span></a>
         </div>
       </div>
     </section>
@@ -247,12 +247,12 @@
 <section class="section pricing-section" id="pricing">
       <div class="container pricing-grid">
         <div class="pricing-copy reveal">
-          <div class="eyebrow">FOUNDING CLIENT OFFER</div>
+          <div class="eyebrow">PRIVATE 1:1 AI BUILD SESSIONS</div>
           <h2>Private AI Build Partner</h2>
           <p>A personalized 1:1 experience built around your actual business, problem, or idea — not a generic curriculum.</p>
-          <div class="price-wrap"><span>$399</span><div><b>Founding client price</b><small>for the complete two-session experience</small></div></div>
+          <div class="price-wrap"><span>$399</span><div><b>Complete 2-session package</b><small>for the complete two-session experience</small></div></div>
           <p class="price-note">Start with the free consultation. You only pay if we both agree the project is a good fit.</p>
-          <a class="btn btn-large" href="#consultation">Start With A Free Call <span>→</span></a>
+          <a class="btn btn-large" href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Start With A Free Call <span>→</span></a>
         </div>
         <div class="price-card reveal delay-1">
           <div class="price-card-top"><span>WHAT’S INCLUDED</span><b>Private 1:1</b></div>
@@ -269,7 +269,7 @@
       </div>
       <div class="container custom-build reveal">
         <div><span>↗</span><div><strong>Prefer to have it built for you?</strong><small>Custom implementation can be scoped separately after we understand the project.</small></div></div>
-        <a href="#consultation">Discuss your project →</a>
+        <a href="https://app.cal.com/myron-c8gqzj/15min" data-cal-link="myron-c8gqzj/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Discuss your project →</a>
       </div>
     </section>
 
@@ -355,5 +355,38 @@ if (rotatingProblem) {
 }
 
 </script>
+
+<script type="text/javascript">
+(function (C, A, L) {
+ let p = function (a, ar) { a.q.push(ar); };
+ let d = C.document;
+ C.Cal = C.Cal || function () {
+   let cal = C.Cal;
+   let ar = arguments;
+   if (!cal.loaded) {
+     cal.ns = {};
+     cal.q = cal.q || [];
+     d.head.appendChild(d.createElement("script")).src = A;
+     cal.loaded = true;
+   }
+   if (ar[0] === L) {
+     const api = function () { p(api, arguments); };
+     const namespace = ar[1];
+     api.q = api.q || [];
+     if (typeof namespace === "string") {
+       cal.ns[namespace] = cal.ns[namespace] || api;
+       p(cal.ns[namespace], ar);
+       p(cal, ["initNamespace", namespace]);
+     } else p(cal, ar);
+     return;
+   }
+   p(cal, ar);
+ };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", "15min", {origin:"https://app.cal.com"});
+Cal.ns["15min"]("ui", {"layout":"month_view"});
+</script>
+
 </body>
 </html>
